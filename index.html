@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowUp Skincare - Your Skin, Your Glow</title>
+    <link rel="stylesheet" href="styles.css"> </head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ GlowUp Skincare ✨</h1>
+            <nav>
+                <a href="#products">Products</a>
+                <a href="#tips">Skincare Tips</a>
+                <a href="#quiz">Skin Type Quiz</a>
+                <a href="#consultation">Free Consultation</a>
+                <a href="#newsletter">Subscribe</a>
+            </nav>
+        </header>
+
+        <section id="products">
+            <h2>🌿 Our Bestselling Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>Hydrating Moisturizer</h3>
+                    <p>Locks moisture for all-day hydration.</p>
+                    <span>₹899</span>
+                    <button onclick="addToCart('Hydrating Moisturizer', 899)">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <h3>Vitamin C Serum</h3>
+                    <p>Brightens skin and reduces dark spots.</p>
+                    <span>₹1200</span>
+                    <button onclick="addToCart('Vitamin C Serum', 1200)">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <h3>Hyaluronic Acid Serum</h3>
+                    <p>Deeply hydrates and plumps the skin.</p>
+                    <span>₹1100</span>
+                    <button onclick="addToCart('Hyaluronic Acid Serum', 1100)">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <h3>Sunscreen SPF 50</h3>
+                    <p>Protects from UV rays without stickiness.</p>
+                    <span>₹599</span>
+                    <button onclick="addToCart('Sunscreen SPF 50', 599)">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <h3>Nourishing Lip Mask</h3>
+                    <p>Repairs and hydrates dry lips overnight.</p>
+                    <span>₹499</span>
+                    <button onclick="addToCart('Nourishing Lip Mask', 499)">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <h3>Exfoliating Face Scrub</h3>
+                    <p>Removes dead skin and unclogs pores.</p>
+                    <span>₹650</span>
+                    <button onclick="addToCart('Exfoliating Face Scrub', 650)">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <h3>Anti-Aging Night Cream</h3>
+                    <p>Reduces wrinkles and promotes elasticity.</p>
+                    <span>₹1500</span>
+                    <button onclick="addToCart('Anti-Aging Night Cream', 1500)">Add to Cart</button>
+                </div>
+            </div>
+
+            <h3>🛒 Shopping Cart</h3>
+            <ul id="cart-items"></ul>
+            <p>Total: ₹<span id="cart-total">0</span></p>
+
+            <h3>💰 Billing Information</h3>
+            <div id="billing-info" style="display:none;">
+                <p>Name: <input type="text" id="billing-name"></p>
+                <p>Address: <textarea id="billing-address"></textarea></p>
+                <p>Payment Method: <select id="billing-payment">
+                    <option value="cod">Cash on Delivery</option>
+                    <option value="card">Credit/Debit Card</option>
+                </select></p>
+                <button onclick="processPayment()">Place Order</button>
+                <p id="order-summary"></p>
+            </div>
+
+            <button onclick="showBilling()">Proceed to Billing</button>
+        </section>
+
+        <section id="tips">
+            <h2>💡 Skincare Tips for a Healthy Glow</h2>
+            <button onclick="showTips()">Show Tips</button>
+            <div id="tips-content" style="display:none;">
+                <ul>
+                    <li>Drink plenty of water for natural glow.</li>
+                    <li>Cleanse your skin twice daily.</li>
+                    <li>Always wear sunscreen, even indoors.</li>
+                    <li>Moisturize to prevent dryness.</li>
+                    <li>Use gentle exfoliants 1-2 times a week.</li>
+                    <li>Sleep for at least 7-8 hours every night.</li>
+                    <li>Choose skincare products suitable for your skin type.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="quiz">
+            <h2>🧴 Find Your Skin Type</h2>
+            <p>Answer this simple question:</p>
+            <p>How does your skin feel most of the time?</p>
+            <select id="skin-type-answer">
+                <option value="oily">Oily and Shiny</option>
+                <option value="dry">Dry and Flaky</option>
+                <option value="combination">Oily in T-Zone, Dry Elsewhere</option>
+                <option value="normal">Balanced and Comfortable</option>
+            </select>
+            <button onclick="showSkinTypeResult()">Submit</button>
+            <p id="skin-type-result"></p>
+
+            <h3>OR Take a Quick Quiz!</h3>
+            <button onclick="startQuiz()">Start Quiz</button>
+            <p id="quiz-result"></p>
+        </section>
+
+        <section id="consultation">
+            <h2>📅 Book Your Free Consultation</h2>
+            <p>Want personalized skincare advice? Book a session with our expert!</p>
+            <button onclick="alert('Consultation Booked Successfully!')">Book Now</button>
+        </section>
+
+        <section id="newsletter">
+            <h2>📧 Subscribe to Our Newsletter</h2>
+            <input type="email" id="email" placeholder="Enter your email">
+            <button onclick="subscribeNewsletter()">Subscribe</button>
+            <p id="subscribe-message"></p>
+        </section>
+
+        <footer>
+            <p>© 2025 GlowUp Skincare | Contact: <a href="mailto:support@glowup.com">support@glowup.com</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
